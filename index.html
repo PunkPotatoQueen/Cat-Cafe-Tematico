@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/output.css">
+    <title>O Condado CatCafé</title>
+</head>
+
+<body class="position-relative">
+    <header class="w-full h-[420px] bg-home bg-cover bg-center">
+        <div class="w-full h-full bg-black bg-opacity-60 flex flex-col justify-center items-center">
+            <img 
+                src="./assets/o condado catcafe.png" 
+                alt="Logo do O Condado CatCafé"
+                class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-300"
+            />
+            <h1 class="text-4xl font-bold mt-4 mb-2 text-white">O Condado</h1>
+            <spam class="text-white font-medium">Rua 07, Recife -PE</spam>
+
+            <div class="flex bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <spam  class=" text-white font-medium">Seg à Domingo das 16h às 22h</spam>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-10 mb-6">
+        Nosso cardápio
+    </h2>
+
+    <div id="menu">
+        <div>
+            <main class ="grid grid-cols-1 gap-7 md:gap-10 mx-auto max-w-7xl md:grid-cols-2 mb-16 px-2">
+            <!-- Cardápio -->
+                <div class="flex gap-2">
+                    <img
+                        src="./assets/cream puffs.png"
+                        alt="Sonho recheado com creme de confeiteiro"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+                    <div>   
+                        <p class="font-bold">Tesouro do dragão</p>
+                        <p class="text-sm">Sonho recheado com creme de confeiteiro. Estão disponíveis os sabores baunilha e goiabada.</p>
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <p class="font-bold text-lg">R$ 7,00</p>
+                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                data-name="Tesouro do dragão"
+                                data-price="7">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <img
+                        src="./assets/heartland apple pie.png"
+                        alt="Torta de maçã"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+                    <div>   
+                        <p class="font-bold">Torta de maçã das Terras Altas</p>
+                        <p class="text-sm">Fatia de torta de maçã tradicional. Também temos nos sabores morango e frutas vermelhas.</p>
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <p class="font-bold text-lg">R$ 12,00</p>
+                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                data-name="Torta de maçã das Terras Altas"
+                                data-price="12">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <img
+                        src="./assets/stuffed egg-battered toast.png"
+                        alt="Sanduíche de ovos"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+                    <div>   
+                        <p class="font-bold">Café da manhã do condado</p>
+                        <p class="text-sm">Sanduíche de pão torrado recheado com ovos, bacon, queijo e salada. Acompanha fritas.</p>
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <p class="font-bold text-lg">R$ 10,00</p>
+                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                data-name="Café da manhã do condado"
+                                data-price="10">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <img
+                        src="./assets/miner pie.png"
+                        alt="Torta salgada sabor frango"
+                        class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                    />
+                    <div>   
+                        <p class="font-bold">Torta dos anões</p>
+                        <p class="text-sm">Fatia de torta de forno salgada nos sabores de frango, frango com catupiry e carne.</p>
+                        <div class="flex items-center justify-between gap-2 mt-3">
+                            <p class="font-bold text-lg">R$ 12,00</p>
+                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                data-name="Torta dos anões"
+                                data-price="12">
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim do Cardápio -->
+            </main>
+        </div>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-10 mb-6">
+                Bebidas
+            </h2>
+        </div>
+
+        <!-- Início bebidas -->
+        <div id="menu-drinks" class ="grid grid-cols-1 gap-7 md:gap-10 mx-auto max-w-7xl md:grid-cols-2 mb-16 px-2">
+            <div class="flex gap-2 w-full">
+                <img
+                    src="./assets/drink stamina potion.png"
+                    alt="Xícara de café"
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div class="w-full">   
+                    <p class="font-bold">Poção de stamina</p>
+                    <p class="text-sm">Xícara de café, podendo ser acompanhado com leite ou achocolatado.</p>
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 5,00</p>
+                        <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                            data-name="Poção de stamina"
+                            data-price="5">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex gap-2 w-full">
+                <img
+                    src="./assets/drink life potion.png"
+                    alt="Chá de maçã com canela."
+                    class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300"
+                />
+                <div class="w-full">   
+                    <p class="font-bold">Poção de vida</p>
+                    <p class="text-sm">Chá gelado de maçã com canela.</p>
+                    <div class="flex items-center justify-between gap-2 mt-3">
+                        <p class="font-bold text-lg">R$ 4,00</p>
+                        <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                            data-name="Poção de vida"
+                            data-price="4">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] hidden items-center justify-center" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-2xl text-center mb-2 font-bold">Meu carrinho</h2>
+            
+            <div id="cart-items" class="flex justify-between mb-2 flex-col">
+            
+            </div>
+
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+
+            <input type="text" 
+            class="w-full my-1 border-2 p-1 rounded" 
+            id="address" 
+            placeholder="Digite o endereço de entrega..." />
+            <p id="address-warn" class="text-red-600 hidden">Digite o endereço, por favor</p>
+
+            <div class="flex w-full items-center justify-between mt-5">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-600 text-white px-4 py-1 rounded">Finalizar pedido</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Fimbebidas -->
+    <footer class="w-full bg-red-600 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" 
+        id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Ver carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="script.js"></script>
+</body>
+</html>
